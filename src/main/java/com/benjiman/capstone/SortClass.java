@@ -1,15 +1,9 @@
 package com.benjiman.capstone;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-
-import static com.benjiman.capstone.CapstoneApplication.troops;
-
 
 // Main sort class holds all Sort Bys
 public class SortClass {

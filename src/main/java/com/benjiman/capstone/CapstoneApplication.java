@@ -11,10 +11,7 @@ import java.util.List;
 public class CapstoneApplication {
 
 	// Local variable for troops that passes the List to a new ArrayList
-
 	public static List<Person> troops = new ArrayList<>();
-	private String name;
-	private String number;
 
 	public static void main(String[] args) {
 
@@ -23,6 +20,7 @@ public class CapstoneApplication {
 		Controller.sortTroopsByPercentage("asc");
 		Controller.topFiveByPercentage("desc");
 		Controller.searchTrooperByNumber(2);
+		addTroop("Ben Sutton", "66", "28");
 
 //		XMLData.GrabXML();
 //		System.out.println(SortClass.sortAsc("desc"));
@@ -30,11 +28,24 @@ public class CapstoneApplication {
 		SpringApplication.run(CapstoneApplication.class, args);
 
 
+
 	}
 
 	@RequestMapping("/")
 	public String getGreeting() {
 		return "Hi its Ben and Your Live in New York City";
+	}
+
+	//    The @PostMapping is a specialized version of @RequestMapping annotation that acts as a shortcut for @RequestMapping(method = RequestMethod.POST).
+	@RequestMapping("/troopersearch/add")
+	public static String addTroop(@RequestParam(value = "name", defaultValue = "null") String name, @RequestParam(value = "number", defaultValue = "null") String number, @RequestParam(value = "percentage", defaultValue = "null") String percentage){
+		if(name.equals("null") || number.equals("null") || percentage.equals("null")){
+			return "Parameters not accepted";
+		}
+		Person p = new Person(name, number, percentage);
+		troops.add(p);
+		return (p.getName() + " added");
+
 	}
 
 

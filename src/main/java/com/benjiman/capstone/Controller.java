@@ -1,10 +1,7 @@
 package com.benjiman.capstone;
 
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -56,15 +53,18 @@ public class Controller {
             return troops.get(index);
         }
     }
+
+
+//    // Adds a trooper to the ArrayList
+//    @PostMapping("/troops/add")
+//    public String addTrooper() {
+//        return CrudOperations.addTroop("Ben Sutton","66", "28");
+//    }
+
 }
 
-//
-//    // Adds a trooper to the ArrayList
-//    @GetMapping("/troopadd")
-//    public List<Person> addTrooper(@RequestParam(value = "sort", defaultValue = "asc") String sort) {
-//        return String.format("Hello %s!", name);
-//    }
-//
+
+
 
 
 
