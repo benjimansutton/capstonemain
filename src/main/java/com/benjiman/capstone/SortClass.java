@@ -11,7 +11,7 @@ public class SortClass {
     // Ascending & Descending sorting by Number using switch with default as Asc
     public static List<Person> sortNum(List<Person> troops, String order) {
         List<Person> output = troops;
-        output.sort((Comparator<Person>) (p1, p2) -> Integer.parseInt(p1.getNumber()) - Integer.parseInt(p2.getNumber()));
+        output.sort((Comparator<Person>) Comparator.comparingInt((Person p) -> Integer.parseInt(p.getNumber())));
 
         // Switch for Ascending and Descending
         switch(order) {
@@ -47,19 +47,19 @@ public class SortClass {
     }
 
     // Sorts the List by Percentage Ascending and shows Top Five Results
-    public static List<Person> topFivePercHigh(List<Person> troops, String toporder) {
-        List<Person> high = troops;
-        high.sort((Comparator<Person>) (p1, p2) -> Integer.parseInt(p1.getPercentage()) - Integer.parseInt(p2.getPercentage()));
-
-        if(toporder.equals("desc")) {
-            Collections.reverse(high);
+    public static List<Person> topFive(List<Person> troops, String toporder) {
+        List<Person> output = troops;
+        output.sort(Comparator.comparingInt((Person p) -> Integer.parseInt(p.getNumber())));
+        if(toporder.equals("desc")){
+            Collections.reverse(output);
         }
         List<Person> top = new ArrayList<Person>();
-        for(int i = 0; i <= 4; i++) {
-            top.add(high.get(i));
+        for(int i = 0; i <= 4; i++){
+            top.add(output.get(i));
         }
-        return high;
+        return top;
     }
+
 
 }
 

@@ -1,0 +1,454 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <record>
+        <number>1</number>
+        <name>Ketty Sant</name>
+        <percentage>19</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>2</number>
+        <name>Erhart Dagnall</name>
+        <percentage>22</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>3</number>
+        <name>Louis Binns</name>
+        <percentage>31</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>4</number>
+        <name>Flora MacAskill</name>
+        <percentage>41</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>5</number>
+        <name>Bel Murfett</name>
+        <percentage>55</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>6</number>
+        <name>Fernando Kilmurray</name>
+        <percentage>97</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>7</number>
+        <name>Shermie Coldham</name>
+        <percentage>100</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>8</number>
+        <name>Hermione Cockshoot</name>
+        <percentage>65</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>9</number>
+        <name>Adelbert Archbould</name>
+        <percentage>77</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>10</number>
+        <name>Reeta Ellcock</name>
+        <percentage>13</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>11</number>
+        <name>Millie Breazeall</name>
+        <percentage>1</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>12</number>
+        <name>Meryl Hugnin</name>
+        <percentage>5</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>13</number>
+        <name>Lorin Raden</name>
+        <percentage>10</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>14</number>
+        <name>Daisy Bourdice</name>
+        <percentage>1</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>15</number>
+        <name>Willyt Addlestone</name>
+        <percentage>87</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>16</number>
+        <name>Oberon Pinor</name>
+        <percentage>81</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>17</number>
+        <name>Candnumbera Gunumberoni</name>
+        <percentage>44</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>18</number>
+        <name>Cathy Crothers</name>
+        <percentage>11</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>19</number>
+        <name>Ermin Deavin</name>
+        <percentage>99</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>20</number>
+        <name>Hattie Cato</name>
+        <percentage>99</percentage>
+        <ammo>200</ammo>
+        <water>10</water>
+        <weapon>SA-79</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>21</number>
+        <name>Kristyn MacFadden</name>
+        <percentage>93</percentage>
+        <ammo>200</ammo>
+        <water>15</water>
+        <weapon>SA-79</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>22</number>
+        <name>Hagan Weddeburn</name>
+        <percentage>9</percentage>
+        <ammo>200</ammo>
+        <water>7</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>23</number>
+        <name>Carri Sammars</name>
+        <percentage>49</percentage>
+        <ammo>200</ammo>
+        <water>10</water>
+        <weapon>SA-78</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>24</number>
+        <name>Dorey Dorcey</name>
+        <percentage>69</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>25</number>
+        <name>Selle Tabord</name>
+        <percentage>89</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>26</number>
+        <name>Donella Rigden</name>
+        <percentage>39</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>27</number>
+        <name>Vincent Trorey</name>
+        <percentage>19</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>28</number>
+        <name>Bevan Bucham</name>
+        <percentage>89</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>29</number>
+        <name>Lotty Schustl</name>
+        <percentage>9</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>30</number>
+        <name>Noak Bill</name>
+        <percentage>66</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>31</number>
+        <name>Shermy Southwick</name>
+        <percentage>7</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>32</number>
+        <name>Dene Shill</name>
+        <percentage>22</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>33</number>
+        <name>Rafael Wolver</name>
+        <percentage>33</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>34</number>
+        <name>Win Clohisey</name>
+        <percentage>77</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>35</number>
+        <name>Bobbee Niese</name>
+        <percentage>19</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>36</number>
+        <name>Marilyn Downse</name>
+        <percentage>6</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>37</number>
+        <name>Sampson Dartan</name>
+        <percentage>48</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>38</number>
+        <name>Darell McHugh</name>
+        <percentage>79</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>39</number>
+        <name>Orelia Purches</name>
+        <percentage>43</percentage>
+        <ammo>22</ammo>
+        <water>10</water>
+        <weapon>SA-80</weapon>
+        <rations>6</rations>
+    </record>
+    <record>
+        <number>40</number>
+        <name>Jethro Mathet</name>
+        <percentage>63</percentage>
+        <ammo>201</ammo>
+        <water>4</water>
+        <weapon>SA-80</weapon>
+        <rations>1</rations>
+    </record>
+    <record>
+        <number>41</number>
+        <name>Peyter Blonden</name>
+        <percentage>80</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>2</rations>
+    </record>
+    <record>
+        <number>42</number>
+        <name>Norri Serman</name>
+        <percentage>70</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>0</rations>
+    </record>
+    <record>
+        <number>43</number>
+        <name>Clarissa Busfield</name>
+        <percentage>8</percentage>
+        <ammo>200</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>1</rations>
+    </record>
+    <record>
+        <number>44</number>
+        <name>Zachariah Prayer</name>
+        <percentage>29</percentage>
+        <ammo>220</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>2</rations>
+    </record>
+    <record>
+        <number>45</number>
+        <name>Mathew Uppett</name>
+        <percentage>27</percentage>
+        <ammo>210</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>4</rations>
+    </record>
+    <record>
+        <number>46</number>
+        <name>Shanna Hartup</name>
+        <percentage>32</percentage>
+        <ammo>100</ammo>
+        <water>50</water>
+        <weapon>SA-81</weapon>
+        <rations>6</rations>
+    </record>
+    <record>
+        <number>47</number>
+        <name>Karole Flinders</name>
+        <percentage>4</percentage>
+        <ammo>2000</ammo>
+        <water>15</water>
+        <weapon>SA-81</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>48</number>
+        <name>Sybil Rooney</name>
+        <percentage>77</percentage>
+        <ammo>10</ammo>
+        <water>15</water>
+        <weapon>SA-81</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>49</number>
+        <name>Ingmar Lapnumberus</name>
+        <percentage>99</percentage>
+        <ammo>199</ammo>
+        <water>5</water>
+        <weapon>SA-80</weapon>
+        <rations>3</rations>
+    </record>
+    <record>
+        <number>50</number>
+        <name>Shawnee Haldene</name>
+        <percentage>100</percentage>
+        <ammo>177</ammo>
+        <water>0</water>
+        <weapon>SA-79</weapon>
+        <rations>13</rations>
+    </record>
+
+</dataset>

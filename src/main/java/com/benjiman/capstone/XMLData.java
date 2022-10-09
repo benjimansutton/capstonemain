@@ -21,7 +21,7 @@ public class XMLData {
         // Try block to check the file exists and throw exception if it doesn't
         try {
             // XML File path
-            File file = new File("src/main/resources/dataset.xml");
+            File file = new File("src/main/resources/datasetExtended.xml");
             DocumentBuilderFactory fac = DocumentBuilderFactory.newInstance();
             DocumentBuilder build = fac.newDocumentBuilder();
             Document doc = build.parse(file);
@@ -40,7 +40,12 @@ public class XMLData {
 
                     // Adds to the file
                     troops.add(new Person(eElement.getElementsByTagName("name").item(0).getTextContent(),
-                            eElement.getElementsByTagName("number").item(0).getTextContent(),eElement.getElementsByTagName("percentage").item(0).getTextContent()));
+                            eElement.getElementsByTagName("number").item(0).getTextContent(),
+                            eElement.getElementsByTagName("percentage").item(0).getTextContent(),
+                            eElement.getElementsByTagName("ammo").item(0).getTextContent(),
+                            eElement.getElementsByTagName("water").item(0).getTextContent(),
+                            eElement.getElementsByTagName("weapon").item(0).getTextContent(),
+                            eElement.getElementsByTagName("rations").item(0).getTextContent()));
 
                 }
             }
