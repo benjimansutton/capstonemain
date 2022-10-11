@@ -1,10 +1,6 @@
 package com.benjiman.capstone;
 
 import org.springframework.web.bind.annotation.*;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.List;
 
 import static com.benjiman.capstone.CapstoneApplication.troops;

@@ -159,7 +159,7 @@ public class Controller {
         String spawnName = null;
         Person p = new Person(name, number, percentage, ammo, water, weapon, rations);
         spawnName = Person.name;
-        troops.add(spawnName, index +1, "0", "120", "5", "SA-80", "3");
+        troops.add(spawnName, "51", "0", "120", "5", "SA-80", "3");
 
         return (p.getName() + " has been added");
     }
