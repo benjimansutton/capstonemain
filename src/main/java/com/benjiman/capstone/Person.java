@@ -1,9 +1,6 @@
 package com.benjiman.capstone;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
-
-
+// Main Variables for the Person, bringing all the elements into it
 public class Person {
 
     private String name;
@@ -20,6 +17,7 @@ public class Person {
 
     private String rations;
 
+    // Constructor for Person
     public Person(String name, String number, String percentage, String ammo, String water, String weapon, String rations) {
         this.name = name;
         this.number = number;
@@ -30,6 +28,10 @@ public class Person {
         this.rations = rations;
     }
 
+    public Person(String name, String number) {
+    }
+
+    // Getters and Setters for the Person Elements
     public String getName() {
         return name;
     }

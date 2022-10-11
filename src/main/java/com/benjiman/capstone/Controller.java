@@ -1,18 +1,16 @@
 package com.benjiman.capstone;
 
-
 import org.springframework.web.bind.annotation.*;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.List;
-
 import static com.benjiman.capstone.CapstoneApplication.troops;
 
 
 // Controller class which holds all the mapping for functions
 @RestController
 public class Controller {
-
-    // placeholders for the controller functions with basic mapping
 
     // XML Grab function will retrieve data from the linked file and pass to ArrayList
     @GetMapping("/xml")
@@ -54,6 +52,7 @@ public class Controller {
         }
     }
 
+    // Delete troop method
     @GetMapping(path="/troops/delete/{number}")
     public String deleteTroop(@PathVariable int number){
         int troopNumber = CrudOperations.troopSearch(troops, number);
@@ -66,26 +65,36 @@ public class Controller {
         }
     }
 
+    @GetMapping(path="/troops/XML")
+    public List<Person> getTroopersByXML(@RequestParam(value = "order", defaultValue = "asc") String order) {
+        System.out.println("Printing from the Controller sort by XML Export");
+        return SortClass.sortNum(troops, order);
+    }
+
     // Trooper Extras including Ammo, Water, Weapon, Rations
 
+    // Sort the troopers by Ammo
     @GetMapping("/sortammo")
     public static List<Person> sortTroopsByAmmo(@RequestParam(value = "ammoorder", defaultValue = "asc") String ammoorder) {
         System.out.println("Printing from the Controller sort by Ammo");
         return TrooperExtras.sortAmmo(troops, ammoorder);
     }
 
+    // Sort the troopers by Water
     @GetMapping("/sortwater")
     public static List<Person> sortTroopsByWater(@RequestParam(value = "waterorder", defaultValue = "asc") String waterorder) {
         System.out.println("Printing from the Controller sort by Water");
         return TrooperExtras.sortWater(troops, waterorder);
     }
 
+    // Sort the troopers by Weapon
     @GetMapping("/sortweapon")
     public static List<Person> sortTroopsByWeapon(@RequestParam(value = "weaponorder", defaultValue = "asc") String weaponorder) {
         System.out.println("Printing from the Controller sort by Weapon");
         return TrooperExtras.sortWeapon(troops, weaponorder);
     }
 
+    // Sort the troopers by Rations
     @GetMapping("/sortrations")
     public static List<Person> sortTroopsByRations(@RequestParam(value = "rationsorder", defaultValue = "asc") String rationsorder) {
         System.out.println("Printing from the Controller sort by Rations");
@@ -124,9 +133,36 @@ public class Controller {
         return TrooperExtras.topFiveRations(troops, "desc");
     }
 
+    @GetMapping(path="troops/update/{number}")
+    public static boolean update(@PathVariable int number, @RequestParam String name){
+        int index = CrudOperations.troopSearch(troops, number);
+        if(CrudOperations.troopSearch(troops, number) != -1){
+            troops.set(index, new Person(name, troops.get(index).getNumber()));
+            return true;
+        }
+        return false;
+    }
 
+    @GetMapping("/troops/spwan/infantry")
+    public static String spawnTrooper(@RequestParam(value = "name", defaultValue = "Troopers Name") String name, @RequestParam(value = "number", defaultValue = index +1) String number, @RequestParam(value = "percentage", defaultValue = "0") String percentage, @RequestParam(value = "ammo", defaultValue = "120") String ammo, @RequestParam(value = "water", defaultValue = "5") String water, @RequestParam(value = "weapon", defaultValue = "SA-80") String weapon, @RequestParam(value = "rations", defaultValue = "3") String rations) {
+        if(name.equals("null") || number.equals("null") || percentage.equals("null") || ammo.equals("null") || water.equals("null") || weapon.equals("null") || rations.equals("null")){
+            return "Parameters not accepted";
+        }
+        Person p = new Person(name, number, percentage, ammo, water, weapon, rations);
+        troops.add(p);
+        return (p.getName() + " added");
+    }
 
+    @GetMapping("/troops/spawn/ready/trooper")
+    public static String trooperSpawning(@RequestParam(value = "name", defaultValue = "Troopers name")) {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in);
+        String spawnName = null;
+        Person p = new Person(name, number, percentage, ammo, water, weapon, rations);
+        spawnName = Person.name;
+        troops.add(spawnName, index +1, "0", "120", "5", "SA-80", "3");
 
+        return (p.getName() + " has been added");
+    }
 
 }
 

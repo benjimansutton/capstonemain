@@ -8,8 +8,6 @@ import java.util.stream.Collectors;
 
 public class TrooperExtras {
 
-    // AMMO Sorting & Top 5
-
     // Sort Function for sorting Ammo by Ascending and Descending
     public static List<Person> sortAmmo(List<Person> troops, String ammoorder) {
         List<Person> ammooutput = troops;
@@ -22,9 +20,7 @@ public class TrooperExtras {
             case "desc": {
                 Collections.reverse(ammooutput);
                 return ammooutput;
-
             }
-
         }
         // Return statement for Troops List
         return troops;
@@ -44,9 +40,6 @@ public class TrooperExtras {
         return top;
     }
 
-
-    // WATER Sorting & Top 5
-
     // Sort Function for sorting Water by Ascending and Descending
     public static List<Person> sortWater(List<Person> troops, String waterorder) {
         List<Person> wateroutput = troops;
@@ -59,9 +52,7 @@ public class TrooperExtras {
             case "desc": {
                 Collections.reverse(wateroutput);
                 return wateroutput;
-
             }
-
         }
         // Return statement for Troops List
         return troops;
@@ -80,9 +71,6 @@ public class TrooperExtras {
         }
         return top;
     }
-
-
-    // WEAPON Sorting
 
     // Sort Function for sorting Weapons by Ascending and Descending
     public static List<Person> sortWeapon(List<Person> troops, String weaponorder) {

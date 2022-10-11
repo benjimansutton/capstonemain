@@ -20,9 +20,7 @@ public class SortClass {
             case "desc": {
                 Collections.reverse(output);
                 return output;
-
             }
-
         }
         // Return statement for Troops List
         return troops;
@@ -41,7 +39,6 @@ public class SortClass {
                 Collections.reverse(input);
                 return input;
             }
-
         }
         return troops;
     }
@@ -59,7 +56,4 @@ public class SortClass {
         }
         return top;
     }
-
-
 }
-

@@ -1,9 +1,9 @@
 package com.benjiman.capstone;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
@@ -46,10 +46,8 @@ public class XMLData {
                             eElement.getElementsByTagName("water").item(0).getTextContent(),
                             eElement.getElementsByTagName("weapon").item(0).getTextContent(),
                             eElement.getElementsByTagName("rations").item(0).getTextContent()));
-
                 }
             }
-
 
         } catch (Exception e) {
             e.printStackTrace();
