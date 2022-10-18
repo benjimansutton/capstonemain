@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 // Main sort class holds all Sort Bys
 public class SortClass {
@@ -43,17 +44,79 @@ public class SortClass {
         return troops;
     }
 
-    // Sorts the List by Percentage Ascending and shows Top Five Results
-    public static List<Person> topFive(List<Person> troops, String toporder) {
-        List<Person> output = troops;
-        output.sort(Comparator.comparingInt((Person p) -> Integer.parseInt(p.getNumber())));
-        if(toporder.equals("desc")){
-            Collections.reverse(output);
+
+    // Sort Function for sorting Water by Ascending and Descending
+    public static List<Person> sortWater(List<Person> troops, String waterorder) {
+        List<Person> wateroutput = troops;
+        wateroutput.sort((Comparator<Person>) Comparator.comparingInt((Person p) -> Integer.parseInt(p.getWater())));
+
+        // Switch for Ascending and Descending
+        switch(waterorder) {
+            case "asc": return wateroutput;
+
+            case "desc": {
+                Collections.reverse(wateroutput);
+                return wateroutput;
+            }
         }
-        List<Person> top = new ArrayList<Person>();
-        for(int i = 0; i <= 4; i++){
-            top.add(output.get(i));
+        // Return statement for Troops List
+        return troops;
+    }
+
+    // Sort Function for sorting Ammo by Ascending and Descending
+    public static List<Person> sortAmmo(List<Person> troops, String ammoorder) {
+        List<Person> ammooutput = troops;
+        ammooutput.sort((Comparator<Person>) Comparator.comparingInt((Person p) -> Integer.parseInt(p.getAmmo())));
+
+        // Switch for Ascending and Descending
+        switch(ammoorder) {
+            case "asc": return ammooutput;
+
+            case "desc": {
+                Collections.reverse(ammooutput);
+                return ammooutput;
+            }
         }
-        return top;
+        // Return statement for Troops List
+        return troops;
+    }
+
+    // Sort Function for sorting Weapons by Ascending and Descending
+    public static List<Person> sortWeapon(List<Person> troops, String weaponorder) {
+        List<Person> weaponoutput = troops;
+
+        List<Person> sortedList = weaponoutput.stream().collect(Collectors.toList());
+//        weaponoutput.sort(Comparator.naturalOrder());
+        // Switch for Ascending and Descending
+        switch(weaponorder) {
+            case "asc":
+//                Comparator.naturalOrder();
+                return sortedList;
+
+            case "desc": {
+                Collections.reverse(sortedList);
+                return sortedList;
+            }
+        }
+        // Return statement for Troops List
+        return troops;
+    }
+
+    // Sort Function for sorting Rations by Ascending and Descending
+    public static List<Person> sortRations(List<Person> troops, String rationorder) {
+        List<Person> rationoutput = troops;
+        rationoutput.sort((Comparator<Person>) Comparator.comparingInt((Person p) -> Integer.parseInt(p.getRations())));
+
+        // Switch for Ascending and Descending
+        switch(rationorder) {
+            case "asc": return rationoutput;
+
+            case "desc": {
+                Collections.reverse(rationoutput);
+                return rationoutput;
+            }
+        }
+        // Return statement for Troops List
+        return troops;
     }
 }

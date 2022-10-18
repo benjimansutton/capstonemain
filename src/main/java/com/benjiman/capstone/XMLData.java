@@ -52,7 +52,6 @@ public class XMLData {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return troops;
     }
 }

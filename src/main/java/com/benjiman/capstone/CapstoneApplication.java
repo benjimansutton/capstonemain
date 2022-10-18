@@ -12,6 +12,7 @@ public class CapstoneApplication {
 	// Local variable for troops that passes the List to a new ArrayList
 	public static List<Person> troops = new ArrayList<>();
 
+	// Main method to run the springboot program
 	public static void main(String[] args) {
 
 		SpringApplication.run(CapstoneApplication.class, args);
