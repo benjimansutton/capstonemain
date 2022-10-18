@@ -1,5 +1,6 @@
 package com.benjiman.capstone;
 
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import static com.benjiman.capstone.CapstoneApplication.troops;
@@ -83,8 +84,8 @@ public class Controller {
         if(troopNumber <= 0){
             return "Service Number not recognised";
         } else{
-            Person p = troops.get(number);
-            troops.remove(number);
+            Person p = troops.get(troopNumber);
+            troops.remove(troopNumber);
             return (p.getName() + " has been removed.");
         }
     }
@@ -113,9 +114,9 @@ public class Controller {
 
     // Controller function to initialise the Sorts the List by Ascending Percentage and shows Top Five Troopers
     @GetMapping("/topfivehighperc")
-    public static List<Person> topFiveBy(@RequestParam(value = "percfive", defaultValue = "asc") String toporder) {
+    public static List<Person> topFiveBy(@RequestParam(value = "percfive", defaultValue = "desc") String toporder) {
         System.out.println("Printing from the Controller sort by Top Five Percentage");
-        return TrooperExtras.topFive(troops, "asc");
+        return TrooperExtras.topFive(troops, "desc");
     }
 
     // Controller function to initialise to Sort the List by Ascending Ammo and shows Top Five Troopers
@@ -139,34 +140,17 @@ public class Controller {
         return TrooperExtras.topFiveRations(troops, "desc");
     }
 
-
-    // Incomplete functions that are in testing phase
-//    @GetMapping("/spawn")
-//    public static List<Person> spawn(@RequestParam(value = "rationsfive", defaultValue = "desc") String rationsorder) {
-//        System.out.println("Printing from the Controller sort by Top Five Rations");
-//        return CrudOperations.spawn(String numbers);
-//    }
-//
-//    @GetMapping("/troops/spwan/infantry")
-//    public static String spawnTrooper(@RequestParam(value = "name", defaultValue = "Troopers Name") String name, @RequestParam(value = "number", defaultValue = index +1) String number, @RequestParam(value = "percentage", defaultValue = "0") String percentage, @RequestParam(value = "ammo", defaultValue = "120") String ammo, @RequestParam(value = "water", defaultValue = "5") String water, @RequestParam(value = "weapon", defaultValue = "SA-80") String weapon, @RequestParam(value = "rations", defaultValue = "3") String rations) {
-//        if(name.equals("null") || number.equals("null") || percentage.equals("null") || ammo.equals("null") || water.equals("null") || weapon.equals("null") || rations.equals("null")){
-//            return "Parameters not accepted";
-//        }
-//        Person p = new Person(name, number, percentage, ammo, water, weapon, rations);
-//        troops.add(p);
-//        return (p.getName() + " added");
-//    }
-//
-//    @GetMapping("/troops/spawn/ready/trooper")
-//    public static String trooperSpawning(@RequestParam(value = "name", defaultValue = "Troopers name")) {
-//        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in);
-//        String spawnName = null;
-//        Person p = new Person(name, number, percentage, ammo, water, weapon, rations);
-//        spawnName = Person.name;
-//        troops.add(spawnName, "51", "0", "120", "5", "SA-80", "3");
-//
-//        return (p.getName() + " has been added");
-//    }
+    // Spawn a Trooper, capturing the name as a Parameter
+    @GetMapping("/spawn")
+    public static String spawn(@RequestParam(value = "name", defaultValue = "null") String name) {
+        System.out.println("Printing from the Controller sort by spawn");
+        if(name.equals("null")){
+            return "Parameters not accepted";
+        }
+        Person p = new Person(name, "51", "0", "120", "5", "SA-80", "3");
+        troops.add(p);
+        return (p.getName() + " added");
+    }
 
 }
 

@@ -38,7 +38,7 @@ public class TrooperExtras {
     // Sorts the List by Percentage Ascending and shows Top Five Results
     public static List<Person> topFive(List<Person> troops, String toporder) {
         List<Person> output = troops;
-        output.sort(Comparator.comparingInt((Person p) -> Integer.parseInt(p.getNumber())));
+        output.sort(Comparator.comparingInt((Person p) -> Integer.parseInt(p.getPercentage())));
         if(toporder.equals("desc")){
             Collections.reverse(output);
         }
