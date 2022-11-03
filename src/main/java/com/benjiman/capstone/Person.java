@@ -1,6 +1,11 @@
 package com.benjiman.capstone;
 
-// Main Variables for the Person, bringing all the elements into it
+/*
+
+ * The Person class holds the private variables for all the elements of the XML file that holds the data,
+ * (1) being a .... (2) are all the getters for each of the variables. (3) are all the setters for the
+ * variables. (4) is the comparator function for some of the other functions outside of this.
+ */
 public class Person {
 
     private String name;
@@ -17,7 +22,7 @@ public class Person {
 
     private String rations;
 
-    // Constructor for Person
+    // (1).
     public Person(String name, String number, String percentage, String ammo, String water, String weapon, String rations) {
         this.name = name;
         this.number = number;
@@ -31,7 +36,7 @@ public class Person {
     public Person(String name, String number) {
     }
 
-    // Getters for the Person Elements
+    // (2)
     public String getName() {
         return name;
     }
@@ -59,8 +64,8 @@ public class Person {
     public String getRations() {
         return rations;
     }
-    // Setters for the Person Elements
 
+    // (3)
     public void setName(String name) {
         this.name = name;
     }
@@ -89,7 +94,7 @@ public class Person {
         this.rations = rations;
     }
 
-    // Comparator for Person
+    // (4)
     public int liken(Person p1, Person p2) {
         return Integer.parseInt(p1.getPercentage()) - Integer.parseInt(p2.getPercentage());
     }

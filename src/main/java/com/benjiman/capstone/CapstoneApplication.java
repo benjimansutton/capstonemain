@@ -5,14 +5,18 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.ArrayList;
 import java.util.List;
 
-// Main Class to Run the SpringBoot & Java Application
+/*
+
+ * Main Java Class CapstoneApplication that holds the main function (1) to Run the SpringBoot & Java Application,
+ * With the first function (2) creating a new ArrayList troops and assigning the List of Person to it.
+ */
 @SpringBootApplication
 public class CapstoneApplication {
 
-	// Local variable for troops that passes the List to a new ArrayList
+	// (2)
 	public static List<Person> troops = new ArrayList<>();
 
-	// Main method to run the springboot program
+	// (1)
 	public static void main(String[] args) {
 
 		SpringApplication.run(CapstoneApplication.class, args);

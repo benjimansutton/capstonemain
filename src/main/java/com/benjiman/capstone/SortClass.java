@@ -5,15 +5,24 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-// Main sort class holds all Sort Bys
+/*
+
+ * Java Class SortClass that holds the functions sortNum, sortPerc, sortWater, sortAmmo, sortWeapon, sortRations
+ */
 public class SortClass {
 
-    // Ascending & Descending sorting by Number using switch with default as Asc
+    /*
+
+     * This function sortNum is which a type of List Person which takes the parameters of the List of Person troops
+     * and a String type of order. This takes the List Person and sets troops to output.
+     * It then takes the output and sorts it via the comparator. This then has a switch statement that if
+     * order is equals to asc it would return output, if it was desc it would take the Collections class in Java and
+     * reverse the output and then return output, Otherwise it would return troops list.
+     */
     public static List<Person> sortNum(List<Person> troops, String order) {
         List<Person> output = troops;
         output.sort((Comparator<Person>) Comparator.comparingInt((Person p) -> Integer.parseInt(p.getNumber())));
 
-        // Switch for Ascending and Descending
         switch(order) {
             case "asc": return output;
 
@@ -22,16 +31,21 @@ public class SortClass {
                 return output;
             }
         }
-        // Return statement for Troops List
         return troops;
     }
 
-    // Ascending & Descending for sorting by Percentage using switch with default as Dec
+    /*
+
+     * This function sortPerc is which a type of List Person which takes the parameters of the List of Person troops
+     * and a String type of sorted. This takes the List Person and sets troops to input.
+     * It then takes the input and sorts it via the comparator. This then has a switch statement that if
+     * sorted is equals to asc it would return input, if it was desc it would take the Collections class in Java and
+     * reverse the input and then return input, Otherwise it would return troops list.
+     */
     public static List<Person> sortPerc(List<Person> troops, String sorted) {
         List<Person> input = troops;
         input.sort((Comparator<Person>) (p1, p2) -> Integer.parseInt(p1.getPercentage()) - Integer.parseInt(p2.getPercentage()));
 
-        // Switch for Ascending and Descending
         switch(sorted) {
             case "asc": return input;
 
@@ -44,52 +58,68 @@ public class SortClass {
     }
 
 
-    // Sort Function for sorting Water by Ascending and Descending
-    public static List<Person> sortWater(List<Person> troops, String waterorder) {
-        List<Person> wateroutput = troops;
-        wateroutput.sort((Comparator<Person>) Comparator.comparingInt((Person p) -> Integer.parseInt(p.getWater())));
+    /*
 
-        // Switch for Ascending and Descending
-        switch(waterorder) {
-            case "asc": return wateroutput;
+     * This function sortWater is which a type of List Person which takes the parameters of the List of Person troops
+     * and a String type of waterOrder. This takes the List Person and sets troops to waterOutput.
+     * It then takes the waterOutput and sorts it via the comparator. This then has a switch statement that if
+     * waterOrder is equals to asc it would return waterOutput, if it was desc it would take the Collections class
+     * in Java and reverse the waterOutput and then return waterOutput, Otherwise it would return troops list.
+     */
+    public static List<Person> sortWater(List<Person> troops, String waterOrder) {
+        List<Person> waterOutput = troops;
+        waterOutput.sort((Comparator<Person>) Comparator.comparingInt((Person p) -> Integer.parseInt(p.getWater())));
+
+        switch(waterOrder) {
+            case "asc": return waterOutput;
 
             case "desc": {
-                Collections.reverse(wateroutput);
-                return wateroutput;
+                Collections.reverse(waterOutput);
+                return waterOutput;
             }
         }
-        // Return statement for Troops List
         return troops;
     }
 
-    // Sort Function for sorting Ammo by Ascending and Descending
-    public static List<Person> sortAmmo(List<Person> troops, String ammoorder) {
-        List<Person> ammooutput = troops;
-        ammooutput.sort((Comparator<Person>) Comparator.comparingInt((Person p) -> Integer.parseInt(p.getAmmo())));
+    /*
 
-        // Switch for Ascending and Descending
-        switch(ammoorder) {
-            case "asc": return ammooutput;
+     * This function sortAmmo is which a type of List Person which takes the parameters of the List of Person troops
+     * and a String type of ammoOrder. This takes the List Person and sets troops to ammoOutput.
+     * It then takes the ammoOutput and sorts it via the comparator. This then has a switch statement that if
+     * ammoOrder is equals to asc it would return ammoOutput, if it was desc it would take the Collections class
+     * in Java and reverse the ammoOutput and then return ammoOutput, Otherwise it would return troops list.
+     */
+    public static List<Person> sortAmmo(List<Person> troops, String ammoOrder) {
+        List<Person> ammoOutput = troops;
+        ammoOutput.sort((Comparator<Person>) Comparator.comparingInt((Person p) -> Integer.parseInt(p.getAmmo())));
+
+        switch(ammoOrder) {
+            case "asc": return ammoOutput;
 
             case "desc": {
-                Collections.reverse(ammooutput);
-                return ammooutput;
+                Collections.reverse(ammoOutput);
+                return ammoOutput;
             }
         }
-        // Return statement for Troops List
         return troops;
     }
 
-    // Sort Function for sorting Weapons by Ascending and Descending
-    public static List<Person> sortWeapon(List<Person> troops, String weaponorder) {
-        List<Person> weaponoutput = troops;
+    /*
 
-        List<Person> sortedList = weaponoutput.stream().collect(Collectors.toList());
-//        weaponoutput.sort(Comparator.naturalOrder());
-        // Switch for Ascending and Descending
-        switch(weaponorder) {
+     * This function sortWeapon is which a type of List Person which takes the parameters of the List of Person troops
+     * and a String type of weaponOrder. This takes the List Person and sets troops to weaponOutput. It also then sets
+     * weaponOutput using stream function collect and setting this to variable sortedList
+     * It then takes the weaponOutput and sorts it via the comparator. This then has a switch statement that if
+     * weaponOrder is equals to asc it would return weaponOutput, if it was desc it would take the Collections class
+     * in Java and reverse the sortedLis and then return sortedLis, Otherwise it would return troops list.
+     */
+    public static List<Person> sortWeapon(List<Person> troops, String weaponOrder) {
+        List<Person> weaponOutput = troops;
+
+        List<Person> sortedList = weaponOutput.stream().collect(Collectors.toList());
+
+        switch(weaponOrder) {
             case "asc":
-//                Comparator.naturalOrder();
                 return sortedList;
 
             case "desc": {
@@ -97,25 +127,29 @@ public class SortClass {
                 return sortedList;
             }
         }
-        // Return statement for Troops List
         return troops;
     }
 
-    // Sort Function for sorting Rations by Ascending and Descending
-    public static List<Person> sortRations(List<Person> troops, String rationorder) {
-        List<Person> rationoutput = troops;
-        rationoutput.sort((Comparator<Person>) Comparator.comparingInt((Person p) -> Integer.parseInt(p.getRations())));
+    /*
 
-        // Switch for Ascending and Descending
-        switch(rationorder) {
-            case "asc": return rationoutput;
+     * This function sortRations is which a type of List Person which takes the parameters of the List of Person troops
+     * and a String type of rationOrder. This takes the List Person and sets troops to rationOrder.
+     * It then takes the rationOutput and sorts it via the comparator. This then has a switch statement that if
+     * ammoOrder is equals to asc it would return rationOutput, if it was desc it would take the Collections class
+     * in Java and reverse the rationOutput and then return rationOutput, Otherwise it would return troops list.
+     */
+    public static List<Person> sortRations(List<Person> troops, String rationOrder) {
+        List<Person> rationOutput = troops;
+        rationOutput.sort((Comparator<Person>) Comparator.comparingInt((Person p) -> Integer.parseInt(p.getRations())));
+
+        switch(rationOrder) {
+            case "asc": return rationOutput;
 
             case "desc": {
-                Collections.reverse(rationoutput);
-                return rationoutput;
+                Collections.reverse(rationOutput);
+                return rationOutput;
             }
         }
-        // Return statement for Troops List
         return troops;
     }
 }
